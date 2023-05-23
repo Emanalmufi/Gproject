@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="608.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehtiwaa.V_profile2Controller">
+   <children>
+      <Pane layoutX="42.0" layoutY="61.0" prefHeight="24.0" prefWidth="267.0">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f8f3f1" height="546.0" layoutX="1.0" layoutY="-7.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="10.0" styleClass="StyleRadius" width="284.0" />
+            <Label layoutX="29.0" layoutY="2.0" prefHeight="20.0" prefWidth="48.0" text="11:07" textFill="#221b1b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="199.0" layoutY="1.0" prefHeight="20.0" prefWidth="54.0">
+               <children>
+                  <ImageView fitHeight="19.0" fitWidth="17.0" layoutX="47.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../EhtiwaImages.images/IM17.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../EhtiwaImages.images/IM18.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="29.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../EhtiwaImages.images/wi.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" height="24.0" layoutX="87.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="112.0" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#7b7b7b" height="6.0" layoutX="121.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="33.0" />
+            <Circle fill="#2d2c2c" layoutX="166.0" layoutY="9.0" radius="3.0" stroke="#4e4d4d" strokeType="INSIDE" strokeWidth="1.5" />
+            <Pane layoutX="20.0" layoutY="147.0" prefHeight="350.0" prefWidth="288.0">
+               <children>
+                  <Pane layoutX="-138.0" layoutY="30.0" prefHeight="284.0" prefWidth="261.0">
+                     <children>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#c8e9e540" height="444.0" layoutX="137.0" layoutY="-135.0" stroke="WHITE" strokeWidth="5.0" width="248.0" />
+                        <Label layoutX="315.0" layoutY="-42.0" prefHeight="64.0" prefWidth="267.0" text=" مجال التطوع:" textAlignment="RIGHT" wrapText="true">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="351.0" layoutY="7.0" mnemonicParsing="false" />
+                        <Label layoutX="326.0" layoutY="4.0" text="صحي">
+                           <font>
+                              <Font name="Sakkal Majalla" size="14.0" />
+                           </font></Label>
+                        <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="297.0" layoutY="7.0" mnemonicParsing="false" />
+                        <Label layoutX="270.0" layoutY="5.0" text="نفسي">
+                           <font>
+                              <Font name="Sakkal Majalla" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="205.0" layoutY="5.0" text="اجتماعي">
+                           <font>
+                              <Font name="Sakkal Majalla" size="14.0" />
+                           </font></Label>
+                        <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="242.0" layoutY="7.0" mnemonicParsing="false" />
+                        <Label layoutX="306.0" layoutY="38.0" text="الشهادة المهنية">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="QForAudioCall" layoutX="209.0" layoutY="147.0" text="هل ترغب باستقبال مكالمات الطوارئ؟">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="YesAnswer" layoutX="342.0" layoutY="168.0" mnemonicParsing="false" onAction="#AnswerFor_Q_AudioCall">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Answer" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="NoAnswer" layoutX="281.0" layoutY="167.0" mnemonicParsing="false" onAction="#AnswerFor_Q_AudioCall" toggleGroup="$Answer" />
+                        <Label layoutX="323.0" layoutY="165.0" text="نعم">
+                           <font>
+                              <Font name="Sakkal Majalla" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="268.0" layoutY="166.0" text="لا">
+                           <font>
+                              <Font name="Sakkal Majalla" size="14.0" />
+                           </font></Label>
+                        <Button layoutX="163.0" layoutY="238.0" mnemonicParsing="false" onAction="#BackPage" prefHeight="26.0" prefWidth="204.0" styleClass="buttons2" stylesheets="@css/styles.css" text="الخلف" textFill="#faf8f8">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="163.0" layoutY="268.0" mnemonicParsing="false" onAction="#Modify" prefHeight="26.0" prefWidth="204.0" styleClass="buttons2" stylesheets="@css/styles.css" text="تعديل" textFill="#faf3f3">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="216.0" layoutY="-146.0" prefHeight="64.0" prefWidth="95.0" text="الملف الشخصي" textAlignment="RIGHT" wrapText="true">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="82.0" layoutX="220.0" layoutY="59.0" stroke="WHITE" strokeWidth="5.0" width="87.0" />
+                        <ScrollPane hmax="8.0" layoutX="228.0" layoutY="64.0" prefHeight="72.0" prefWidth="74.0" styleClass="buttonsBar" stylesheets="@css/styles.css">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="82.0">
+                                 <children>
+                                    <AnchorPane layoutX="6.0" layoutY="3.0" prefHeight="64.0" prefWidth="91.0">
+                                       <children>
+                                          <VBox layoutX="-4.0" prefHeight="37.0" prefWidth="95.0">
+                                             <children>
+                                                <HBox prefHeight="18.0" prefWidth="95.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="42.0" text="Label" />
+                                                      <Label prefHeight="18.0" prefWidth="42.0" text="شهادة 1">
+                                                         <font>
+                                                            <Font name="Sakkal Majalla Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="18.0" prefWidth="95.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="42.0" text="Label" />
+                                                      <Label prefHeight="18.0" prefWidth="42.0" text="شهادة 2">
+                                                         <font>
+                                                            <Font name="Sakkal Majalla Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="18.0" prefWidth="95.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="42.0" text="Label" />
+                                                      <Label prefHeight="18.0" prefWidth="42.0" text="شهادة 3">
+                                                         <font>
+                                                            <Font name="Sakkal Majalla Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="18.0" prefWidth="95.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="42.0" text="Label" />
+                                                      <Label prefHeight="18.0" prefWidth="42.0" text="شهادة 4">
+                                                         <font>
+                                                            <Font name="Sakkal Majalla Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="18.0" prefWidth="95.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="42.0" text="شهادة 4 " />
+                                                      <Label prefHeight="18.0" prefWidth="42.0" text="شهادة 5">
+                                                         <font>
+                                                            <Font name="Sakkal Majalla Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="72.0" fitWidth="84.0" layoutX="309.0" layoutY="-157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../EhtiwaImages.images/logo_Ehtewa2-remove.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="181.0" layoutY="-66.0" prefHeight="28.0" prefWidth="195.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d90ae" height="28.0" layoutX="158.0" stroke="#3d5272" strokeType="INSIDE" width="32.0" />
+                              <TextField fx:id="DegreeBT" alignment="CENTER_RIGHT" cacheShape="false" layoutX="1.0" prefHeight="6.0" prefWidth="158.0" promptText="المؤهل العلمي" styleClass="textfild2" stylesheets="@../../../../../OneDrive/المستندات/NetBeansProjects/Gproject-Ehtiwaa/src/ehtiwaa/css/styles.css">
+                                 <font>
+                                    <Font name="Sakkal Majalla" size="11.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="136.0" layoutY="-20.0" text="المؤهل العلمي">
+                                 <font>
+                                    <Font name="Sakkal Majalla Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="162.0" layoutY="4.0">
+                                 <image>
+                                    <Image url="@../EhtiwaImages.images/university-degree.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="174.0" layoutY="201.0" prefHeight="28.0" prefWidth="188.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d90ae" height="29.0" layoutX="158.0" layoutY="-1.0" stroke="#3d5272" strokeType="INSIDE" width="32.0" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="135.0" layoutY="-21.0" prefHeight="21.0" prefWidth="55.0" text="الرمز السري">
+                                 <font>
+                                    <Font name="Sakkal Majalla Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="162.0" layoutY="3.0">
+                                 <image>
+                                    <Image url="@../EhtiwaImages.images/IM5-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <PasswordField alignment="CENTER_RIGHT" layoutX="5.0" layoutY="-1.0" prefHeight="29.0" prefWidth="158.0" promptText="********************" styleClass="textfild2" stylesheets="@../../../../../OneDrive/المستندات/NetBeansProjects/Gproject-Ehtiwaa/src/ehtiwaa/css/styles.css">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="50.0" layoutY="558.0" prefHeight="29.0" prefWidth="267.0" stylesheets="@css/styles.css">
+         <children>
+            <Button layoutX="172.0" layoutY="-6.0" mnemonicParsing="false" onAction="#GoToMore_V" prefHeight="37.0" prefWidth="95.0" styleClass="buttonsBar" stylesheets="@../../../../../OneDrive/المستندات/NetBeansProjects/Gproject-Ehtiwaa/src/ehtiwaa/css/styles.css">
+               <graphic>
+                  <Pane prefHeight="29.0" prefWidth="33.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="15.0" prefHeight="18.0" prefWidth="24.0" text="المزيد" textAlignment="CENTER">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="31.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../EhtiwaImages.images/more.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </graphic>
+            </Button>
+            <Button layoutX="3.0" layoutY="-6.0" mnemonicParsing="false" onAction="#GoToRequest_V" prefHeight="37.0" prefWidth="95.0" styleClass="buttonsBar" stylesheets="@../../../../../OneDrive/المستندات/NetBeansProjects/Gproject-Ehtiwaa/src/ehtiwaa/css/styles.css">
+               <graphic>
+                  <Pane prefHeight="29.0" prefWidth="56.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="17.0" prefHeight="18.0" prefWidth="33.0" text="الطلبات">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="28.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../EhtiwaImages.images/list.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </graphic>
+            </Button>
+            <Button layoutX="88.0" layoutY="-6.0" mnemonicParsing="false" onAction="#BackToHome_V" prefHeight="37.0" prefWidth="95.0" styleClass="buttonsBar" stylesheets="@../../../../../OneDrive/المستندات/NetBeansProjects/Gproject-Ehtiwaa/src/ehtiwaa/css/styles.css">
+               <graphic>
+                  <Pane prefHeight="29.0" prefWidth="33.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="17.0" prefHeight="18.0" prefWidth="33.0" text="الرئيسية">
+                           <font>
+                              <Font name="Sakkal Majalla Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="29.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../EhtiwaImages.images/IM2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </graphic>
+            </Button>
+            <Line endX="170.66665649414062" layoutX="98.0" layoutY="-5.0" startX="-97.33332824707031" />
+            <Line endX="44.83332824707031" endY="68.6666259765625" layoutX="47.0" layoutY="-72.0" startX="44.83335876464844" startY="103.33331298828125" />
+            <Line endX="44.83332824707031" endY="68.6666259765625" layoutX="137.0" layoutY="-72.0" startX="44.83335876464844" startY="103.33331298828125" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
